@@ -1,12 +1,12 @@
 const PORT = process.env.PORT || 8080
 
-const BackEndFraappmework = require('./src/Framework')
+const BackEndFramework = require('./src/Framework')
 const Router = require('./middleware/router-middleware')
 
 const baseData = require('./middleware/base-data')
 const jsonBodyParser = require('./middleware/json-body-parser')
 
-const app = new BackEndFraappmework()
+const app = new BackEndFramework()
 const router = new Router()
 
 app.use(baseData)
