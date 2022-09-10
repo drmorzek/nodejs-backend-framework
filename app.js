@@ -16,13 +16,10 @@ router.get('/get-message', (ctx) => {
 	ctx.body = { message: 'Hello There' }
 })
 
-const messages = {
-	"1": "Hi",
-	"2": "There"
-}
 
-router.get('/get-message/{id}', (ctx) => {
-	ctx.body = { message: messages[ctx.params.id] }
+
+router.get('/get-message/{id}/{di}', (ctx) => {
+	ctx.body = { params: ctx.params }
 })
 
 router.post('/post', (ctx) => {

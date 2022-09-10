@@ -30,8 +30,9 @@ module.exports = class Router {
 				if (route.length === path.length) {
 					let parameters = {};
 					for (let i = 0; i < route.length; i++) {
-						if (route[i].match(pattern)) {
-							parameters[route[i].match(pattern).pop()] = path[i];
+						const matching = route[i].match(pattern)						
+						if (matching) {
+							parameters[matching.pop()] = path[i];
 						} else if (route[i] === path[i]) {
 							continue;
 						} else {
