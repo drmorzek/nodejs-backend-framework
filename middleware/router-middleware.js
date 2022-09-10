@@ -59,7 +59,6 @@ module.exports = class Router {
 			const { path, method } = ctx
 
 			let { route, data } = this.#find(path, this.routes)
-			console.log(route, path, method)
 
 			if (!!data) {
 				ctx.params = data
